@@ -22,10 +22,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('home',[CategoryController::class,'index'])->name('home');
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+Route::get('/',[CategoryController::class,'index'])->name('home');
 Route::get('view',[CategoryController::class,'show'])->name('view');
 Route::get('filter',[CategoryController::class,'filter'])->name('filter');
 Route::get('city_filter',[CategoryController::class,'city_filter'])->name('city_filter');
